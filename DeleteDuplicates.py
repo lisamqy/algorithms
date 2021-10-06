@@ -23,3 +23,6 @@ class Solution:
                 # reassign current to the next to keep checking the rest of the list
                 current = current.next
         return head
+
+
+# Time = O(n) / Space = O(1)
