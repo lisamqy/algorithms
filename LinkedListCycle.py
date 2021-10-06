@@ -5,13 +5,13 @@
 
 # Definition for singly-linked list.
 class ListNode:
-        def __init__(self,x):
-            self.val = x
-            self.next = None
+    def __init__(self,x):
+        self.val = x
+        self.next = None
 
 class Solution:
     def hasCycle(self, head: ListNode): #-> bool
-        
+
         # initialize a fast and slow pointer that both start at the head node
         # fast will most twice the pace as the slow pointer 
         # when they meet again, that means there is a cycle
