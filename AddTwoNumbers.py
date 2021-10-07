@@ -5,8 +5,6 @@ Add the two numbers and return the sum as a linked list.'''
 '''You may assume the two numbers do not contain any leading zero, except the number 0 itself.'''
 
 # Definition for singly-linked list.
-from typing import List
-
 
 class ListNode:
     def __init__(self, val=0, next=None):
