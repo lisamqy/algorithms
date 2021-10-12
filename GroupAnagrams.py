@@ -23,7 +23,7 @@ class Solution:
 # Using dict.get()
 class Solution:
     def groupAnagrams(self, strs: List[str]) -> List[List[str]]:
-        # create a lookup for a defaultdict with list as our value
+        # create an empty dict
         result = {}
         # iterate through list of strs
         for str in strs:
