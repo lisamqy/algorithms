@@ -20,8 +20,23 @@ class Solution:
 
         return result.values()
 
+# Using dict.get()
+class Solution:
+    def groupAnagrams(self, strs: List[str]) -> List[List[str]]:
+        # create a lookup for a defaultdict with list as our value
+        result = {}
+        # iterate through list of strs
+        for str in strs:
+            # turn the sorted letters of that str into tuple to use as key
+            sorted_str_tuple = tuple(sorted(str))
+            # either create a new key:value pair for the sorted str tuple or 
+            # add a value(unsorted str) to an existing sorted str tuple
+            result[sorted_str_tuple] = result.get(sorted_str_tuple, []) + [str]
+        # return as a list of lists
+        return list(result.values())
 
-# Using ascii for better run time O(n * k)
+
+# Using ascii 
 class Solution:
     def groupAnagrams(self, strs: List[str]) -> List[List[str]]:
         result = defaultdict(list)
