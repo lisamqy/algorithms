@@ -26,32 +26,31 @@ class Solution:
 
 # Without built-in methods
 
-class Solution:
-    def numUniqueEmails(self, emails: List[str]) -> int:
-        # initiate a set so we can later pick out the uinque emails
-        unique = set()
+def numUniqueEmails(emails: List[str]) -> int:
+    # initiate a set so we can later pick out the uinque emails
+    unique = set()
 
-        # iterate through each email address to
-        for email in emails:
-            # set our variables
-            i,local = 0, ""
-            # check if current index is one of the two symbols
-            while email[i] not in ["@", "+"]:
-                # add every character to local if its not equal to to "."
-                if email[i] != ".":
-                    local += email[i]
-                    i += 1
-
-            # after getting the local part, we have to also get the domain part of our string
-            # this while loop ensures that i still gets incremented in case the while loop above was stopped at a plus sign
-            while email[i] != "@":
+    # iterate through each email address to
+    for email in emails:
+        # set our variables
+        i,local = 0, ""
+        # check if current index is one of the two symbols
+        while email[i] not in ["@", "+"]:
+            # add every character to local if its not equal to to "."
+            if email[i] != ".":
+                local += email[i]
                 i += 1
 
-            # grab everything after the current index of i
-            domain = email[i + 1:]
-            
-            # add to set
-            unique.add((local,domain))
+        # after getting the local part, we have to also get the domain part of our string
+        # this while loop ensures that i still gets incremented in case the while loop above was stopped at a plus sign
+        while email[i] != "@":
+            i += 1
 
+        # grab everything after the current index of i
+        domain = email[i + 1:]
         
-        return len(unique)
+        # add to set
+        unique.add((local,domain))
+
+    
+    return len(unique)
