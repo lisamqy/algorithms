@@ -8,7 +8,7 @@ class Solution:
         count = {}
         # create a list of empty lists for buckets for the possible frequencies (range of len of our nums list plus 1)
         # the value would be the number from our list that occurred that many times
-        freq = [[] for i in range(len(num) + 1 )]
+        freq = [[] for i in range(len(nums) + 1 )]
 
         # iterate through the given nums list and count how many times each item has occurred
         for n in nums:
