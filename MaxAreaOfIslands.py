@@ -7,7 +7,7 @@ Return the maximum area of an island in grid. If there is no island, return 0.
 '''
 
 
-# very similar to number of island question
+# very similar to 200. number of islands
 # solution using dfs recursively 
 
 class Solution;
