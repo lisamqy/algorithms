@@ -37,3 +37,4 @@ class Solution:
         root.right = self.buildTree(preorder[mid + 1:], inorder[mid + 1:])
         return root
 
+# Time: O(n^2) since recursion and use of .index()
