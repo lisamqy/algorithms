@@ -26,3 +26,18 @@ class Solution:
         return max(LIS)
 
 # Time: O(n^2) due to the nested loops
+# Space: O(n)
+
+
+# Cleaner O(n^2) dp style
+class Solution:
+    def lengthOfLIS(self, nums: List[int]) -> int:
+        n = len(nums)
+        LIS = [1] * n
+
+        for i in range(n):
+            for j in range(i):
+                if nums[i] > nums[j] and LIS[i] < LIS[j] + 1:
+                    LIS[i] = 1 + LIS[j]
+
+        return max(LIS)
